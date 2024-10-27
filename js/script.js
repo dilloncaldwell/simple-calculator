@@ -8,24 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			btnCallback(value);
 		});
 	});
-
-	function btnCallback(value) {
-		switch (value) {
-			case '=':
-				display.value = calculateResult();
-				break;
-			case 'C':
-				clearDisplay();
-				break;
-			case 'DEL':
-				deleteLast();
-				break;
-			default:
-				appendToDisplay(value);
-				break;
-		}
-	}
 });
+
+function btnCallback(value) {
+	switch (value) {
+		case '=':
+			display.value = calculateResult();
+			break;
+		case 'C':
+			clearDisplay();
+			break;
+		case 'DEL':
+			deleteLast();
+			break;
+		default:
+			appendToDisplay(value);
+			break;
+	}
+}
 
 function checkDisplayForZero(value) {
 	if (display.value === '0') {
